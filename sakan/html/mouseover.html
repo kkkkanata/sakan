@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>sample1</title>
+  <style>
+    div {
+      display: inline-block;
+      width: 100px;
+      height: 100px;
+      margin: 10px;
+      padding: 10px;
+      border: medium solid blue;
+    }
+  </style>
+</head>
+<body>
+  <div id="div1">要素１</div>
+  <div id="div2">要素２</div>
+  <div id="div3">要素３</div>
+</body>
+<script type="text/javascript">
+  for (i = 1; i <= 3; i++) {
+    var elem = document.getElementById("div" + i);
+    elem.addEventListener("mouseover", function (event) {
+      event.target.style.backgroundColor = "orange";
+    }, false);
+    elem.addEventListener("mouseleave", function (event) {
+      event.target.style.backgroundColor = null;
+    }, false);
+  }
+</script>
+</html>

@@ -1,0 +1,47 @@
+.box{
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.logo{
+  float: left;
+  width:250px;
+}
+ul{
+  display: flex;
+  list-style-type:none;
+}
+
+header  li{
+  width:100px;
+  margin-top:20px;
+}
+.box{
+  display: inline;
+}
+.slide {
+	position:relative;
+	height:400px;
+}
+.cake{
+	position:absolute;
+	opacity:0;
+	transition:all 1s ease-in-out;
+	height:100%;
+	object-fit:contain;
+}
+h1{
+  margin-left: auto;
+  margin-right: auto;
+}
+.point img{
+  width:200px;
+  float:left;
+}
+.info{
+  clear: right;
+}
+footer{
+  clear: both;
+}

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../css/sakan_map.css">
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <script src="../js/thum.js"></script>
+  <title>店鋪地図</title>
+</head>
+<body>
+
+  <header>
+      <div class="syu"><img src="../img/syu.logo.gif"></div>
+      <div class="logo"><img src="../img/sakan_syu.gif"></div>
+      <div class="reserve">
+        <a href="../php/reservation.php"><img src="../img/reserve.gif"></a>
+      </div>
+      <div class="recrutiment">
+        <a href="../php/recrutiment.php"><img src="../img/b_staff.gif"></a>
+      </div>
+      <nav>
+        <ul>
+          <li>
+            <a href="../html/sakan_home.html">
+              ホーム
+            </a>
+          </li>
+          <li>
+            <a href="../html/spring_cake.html">
+              季節のケーキ
+            </a>
+          </li>
+          <li>
+            <a href="../html/season_coffee.html">
+              コーヒーへのこだわり
+            </a>
+          </li>
+          <li>
+            <a href="../html/sakan_map.html">
+              店鋪情報
+            </a>
+          </li>
+          <li>
+            <a href="../php/user_point.php">
+              ポイント照会
+            </a>
+          </li>
+        </ul>
+      </nav>
+  </header>
+
+  <div class="imageList">
+
+      <div class="imageList__view">
+        <h2 id="main">イトシアプラザ有楽町店</h2>
+        <img src="../img/map_itocia.gif">
+        <p>ご不明な点があれば店舗までお電話ください</p>
+        <table>
+          <tr>
+            <th>店舗</th>
+            <th>電話番号</th>
+            <th>住所</th>
+          </tr>
+          <tr>
+            <td>イトシアプラザ有楽町店</td>
+            <td>03-3211-0542</td>
+            <td>東京都千代田区有楽町2-7-1 イトシアプラザ2F</td>
+          </tr>
+          <tr>
+            <td>有楽町アネックス店</td>
+            <td>03-3580-8989</td>
+            <td>東京都千代田区有楽町1-6-6　小谷ビルB1F</td>
+          </tr>
+          <tr>
+            <td>赤坂見附店</td>
+            <td>03-3505-1907</td>
+            <td>東京都港区赤坂3-9-1　紀陽ビル1F</td>
+          </tr>
+          <tr>
+            <td>池袋店</td>
+            <td>03-3980-3851</td>
+            <td>東京都豊島区東池袋1-2-2　東池ビルディングB1</td>
+          </tr>
+          <tr>
+            <td>目黒店</td>
+            <td>03-3493-7954</td>
+            <td>東京都品川区上大崎2-27-3　武本ビルB1</td>
+          </tr>
+          <tr>
+            <td>プレミアム新宿店</td>
+            <td>03-3200-1374</td>
+            <td>新宿区歌舞伎町1-17-1　栗田ビル２F・３F</td>
+          </tr>
+          <tr>
+            <td>新宿店</td>
+            <td>03-3200-0233</td>
+            <td>東京都新宿区歌舞伎町1-17-12　浅川ビル2F</td>
+          </tr>
+          <tr>
+            <td>プレミアム渋谷店</td>
+            <td>03-3464-9244</td>
+            <td>東京都渋谷区道玄坂 2-29-3 道玄坂共同ビル 1 ・ 2F</td>
+          </tr>
+          <tr>
+            <td>渋谷宮益坂店</td>
+            <td>03-6427-4817</td>
+            <td>東京都渋谷区渋谷1-13-8　サカエビル１F</td>
+          </tr>
+          <tr>
+            <td>自由が丘店</td>
+            <td>03-3723-9785</td>
+            <td>東京都目黒区自由ヶ丘2-10-4</td>
+          </tr>
+          <tr>
+            <td>六本木店</td>
+            <td>03-3403-6520</td>
+            <td>東京都港区六本木5-1-1　マイアミビル7F</td>
+          </tr>
+          <tr>
+            <td>原宿表参道店</td>
+            <td>03-3423-9841</td>
+            <td>東京都渋谷区神宮前1-13-11大西ビルB1</td>
+          </tr>
+          <tr>
+            <td>五反田東口店</td>
+            <td>03-3443-0251</td>
+            <td>東京都品川区東五反田5-27-6　第一五反田ビル2F</td>
+          </tr>
+          <tr>
+            <td>五反田西口店</td>
+            <td>03-3492-5681</td>
+            <td>東京都品川区西五反田1-5-2　トラヤビル2F</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="imageList__thumbs">
+
+        <div class="imageList__thumbnail">
+          <p id="anex">有楽町アネックス店</p>
+          <img src="../img/map_anex.gif">
+        </div>
+
+        <div class="imageList__thumbnail">
+          <p id="akasaka">赤坂見附店</p>
+          <img src="../img/map_akasaka.gif">
+        </div>
+
+        <div class="imageList__thumbnail">
+          <p id="ikebukuro">池袋店</p>
+          <img src="../img/map_ikebukuro.gif">
+        </div>
+
+        <div class="imageList__thumbnail">
+          <p id="meguro">目黒店</p>
+          <img src="../img/map_meguro.gif">
+        </div>
+
+        <div class="imageList__thumbnail">
+          <p id="p_shinjuku">プレミアム新宿店</p>
+          <img src="../img/map_p_shinjuku.gif">
+        </div>
+
+        <div class="imageList__thumbnail">
+          <p id="shinjuku">新宿店</p>
+          <img src="../img/map_shinjuku.gif">
+        </div>
+
+        <div class="imageList__thumbnail">
+          <p id= "p_shibuya">プレミアム渋谷店</p>
+          <img src="../img/map_p_shibuya.gif">
+        </div>
+
+        <div class="imageList__thumbnail">
+          <p id="miyamasu">渋谷宮益坂店</p>
+          <img src="../img/map_miyamasu.gif">
+        </div>
+
+        <div class="imageList__thumbnail">
+          <p id="jiyuugaoka">自由が丘店</p>
+          <img src="../img/map_jiyugaoka.gif">
+        </div>
+
+        <div class="imageList__thumbnail">
+          <p id="roppongi">六本木店</p>
+          <img src="../img/map_roppongi.gif">
+        </div>
+
+        <div class="imageList__thumbnail">
+          <p id="harajuku">原宿表参道店</p>
+          <img src="../img/map_harajuku.gif">
+        </div>
+
+        <div class="imageList__thumbnail">
+          <p id="gotanda">五反田東口店</p>
+          <img src="../img/map_gotanda.gif">
+        </div>
+
+        <div class="imageList__thumbnail">
+          <p id=w_gotanda>五反田西口店</p>
+          <img src="../img/map_w_gotanda.gif">
+        </div>
+
+        <div class="imageList__thumbnail">
+          <p id="itocia">iイトシアプラザ有楽町店</p>
+          <img src="../img/map_itocia.gif">
+        </div>
+
+      </div>
+
+  </div>
+
+  <footer>
+      <div><img src="../img/footer_syu.gif"></div>
+  </footer>
+
+</body>
+</html>

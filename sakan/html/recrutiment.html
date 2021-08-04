@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>採用情報</title>
+    <link rel="stylesheet" type="text/css" href="../css/recrutiment.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="../js/recrutiment.js"></script>
+  </head>
+  <body>
+
+    <header>
+        <div class="syu"><img src="../img/syu.logo.gif"></div>
+        <div class="logo"><img src="../img/sakan_syu.gif"></div>
+        <div class="reserve">
+          <a href="../php/reservation.php"><img src="../img/reserve.gif"></a>
+        </div>
+        <div class="recrutiment">
+          <a href="../php/recrutiment.php"><img src="../img/b_staff.gif"></a>
+        </div>
+        <nav>
+          <ul>
+            <li>
+              <a href="../html/sakan_home.html">
+                ホーム
+              </a>
+            </li>
+            <li>
+              <a href="../html/spring_cake.html">
+                季節のケーキ
+              </a>
+            </li>
+            <li>
+              <a href="../html/season_coffee.html">
+                コーヒーへのこだわり
+              </a>
+            </li>
+            <li>
+              <a href="../html/sakan_map.html">
+                店鋪情報
+              </a>
+            </li>
+            <li>
+              <a href="../php/user_point.php">
+                ポイント照会
+              </a>
+            </li>
+          </ul>
+        </nav>
+    </header>
+
+    <div class="tennai">
+      <img src="../img/top.jpeg">
+      <div>
+          <p class="you">あなたと共に</p>
+          <p class="day">働ける日を</p>
+          <p class="joy">楽しみにしております</p>
+       </div>
+     </div>
+    <article class="rec">
+      <p>面接日時などは採用担当者から連絡いたします</p>
+      <?php foreach ($err_message as $err) { ?>
+        <p><?php print $err; ?></p>
+      <?php } ?>
+      <form method="post">
+        名前：<input type="text" name="name"><br>
+        メールアドレス：<input type="text" name="mail"><br>
+        希望職種：<select name="job">
+                                  <option value="ホール">ホール</option>
+                                  <option value="パティシエ">パティシエ</option>
+                            </select><br>
+        希望店鋪：<select name="shop">
+                                  <option value="池袋">池袋</option>
+                                  <option value="新宿">新宿</option>
+                                  <option value="P新宿">P新宿</option>
+                                  <option value="渋谷宮益坂">渋谷宮益坂</option>
+                                  <option value="P渋谷">P渋谷</option>
+                                  <option value="PG渋谷">PG渋谷</option>
+                                  <option value="目黒">目黒</option>
+                                  <option value="赤坂">赤坂</option>
+                                  <option value="六本木">六本木</option>
+                                  <option value="五反田東口">五反田東口</option>
+                                  <option value="五反田西口">五反田西口</option>
+                                  <option value="有楽町イトシア">有楽町イトシア</option>
+                                  <option value="有楽町アネックス">有楽町アネックス</option>
+                                  <option value="自由が丘">自由が丘</option>
+                                  <option value="原宿">原宿</option>
+                            </select><br>
+        その他要望(100文字以内でお願いします)<br><textarea name="request"cols="25" rows="4"wrap="hard"></textarea><br>
+        <input type="submit" value="送信">
+        <input type="reset" value="ﾘｾｯﾄ">
+      </form>
+  </article>
+
+  <footer>
+    <div><img src="../img/footer_syu.gif"></div>
+  </footer>
+
+  </body>
+</html>

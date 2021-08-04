@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../css/user_point.css">
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="../js/user_point.js"></script>
+  <title>新規登録</title>
+</head>
+<body>
+
+  <header>
+      <div class="syu"><img src="../img/syu.logo.gif"></div>
+      <div class="logo"><img src="../img/sakan_syu.gif"></div>
+      <div class="reserve">
+        <a href="../php/reservation.php"><img src="../img/reserve.gif"></a>
+      </div>
+      <div class="recrutiment">
+        <a href="../php/recrutiment.php"><img src="../img/b_staff.gif"></a>
+      </div>
+      <nav>
+        <ul>
+          <li>
+            <a href="../html/sakan_home.html">
+              ホーム
+            </a>
+          </li>
+          <li>
+            <a href="../html/spring_cake.html">
+              季節のケーキ
+            </a>
+          </li>
+          <li>
+            <a href="../html/season_coffee.html">
+              コーヒーへのこだわり
+            </a>
+          </li>
+          <li>
+            <a href="../html/sakan_map.html">
+              店鋪情報
+            </a>
+          </li>
+          <li>
+            <a href="../php/user_point.php">
+              ポイント照会
+            </a>
+          </li>
+        </ul>
+      </nav>
+  </header>
+
+  <div class="tennai">
+    <img src="../img/tennai.jpeg">
+    <div>
+        <p class="coffee">琥珀とアロマ</p>
+        <p class="aroma">芳醇な香り</p>
+        <p class="norble">至福のひと時を</p>
+  </div>
+  </div>
+
+  <article class="point">
+    <h1>新規登録</h1>
+    <form method="post">
+      ユーザー名：<input type="text" name="user"><br>
+      メールアドレス：<input type="mail" name="mail"><br>
+      会員番号：<input type="text" name="number"><br>
+      パスワード：<input type="password" name="user_passwd">
+      <input type="submit"value="登録">
+    </form>
+    <a href="../php/user_point.php">ポイントログイン</a>
+
+    <?php foreach ($err_message as $err) { ?>
+      <p><?php print $err; ?></p>
+    <?php } ?>
+
+   <?php if(count($err_message) === 0){ ?>
+      <h2><?php print 'ユーザー名：'.$user .'様'; ?></h2>
+      <p><?php print $ent_message; ?></p>
+   <?php } ?>
+ </article>
+
+  <footer>
+    <div><img src="../img/footer_syu.gif"></div>
+  </footer>
+
+</body>
+</html>

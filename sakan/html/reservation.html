@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>予約</title>
+  <link rel="stylesheet" type="text/css" href="../css/reservation.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script src="https://rawgit.com/jquery/jquery-ui/master/ui/i18n/datepicker-ja.js"></script>
+  <script src="../js/reservation.js"></script>
+</head>
+<body>
+
+  <header>
+        <div class="syu"><img src="../img/syu.logo.gif"></div>
+        <div class="logo"><img src="../img/sakan_syu.gif"></div>
+        <div class="reserve">
+          <a href="../php/reservation.php"><img src="../img/reserve.gif"></a>
+        </div>
+        <div class="recrutiment">
+          <a href="../php/recrutiment.php"><img src="../img/b_staff.gif"></a>
+        </div>
+        <nav>
+          <ul>
+            <li>
+              <a href="../html/sakan_home.html">
+                ホーム
+              </a>
+            </li>
+            <li>
+              <a href="../html/spring_cake.html">
+                季節のケーキ
+              </a>
+            </li>
+            <li>
+              <a href="../html/season_coffee.html">
+                コーヒーへのこだわり
+              </a>
+            </li>
+            <li>
+              <a href="../html/sakan_map.html">
+                店鋪情報
+              </a>
+            </li>
+            <li>
+              <a href="../php/user_point.php">
+                ポイント照会
+              </a>
+            </li>
+          </ul>
+        </nav>
+    </header>
+
+    <div class="tennai">
+      <img src="../img/top.jpeg">
+      <div>
+          <p class="one">一期一会の精神で</p>
+          <p class="service">最高級のおもてなしを</p>
+          <p class="supp">提供してまいります</p>
+      </div>
+    </div>
+
+  <?php foreach ($err_message as $err) { ?>
+    <p><?php print $err; ?></p>
+  <?php } ?>
+  <article class="res">
+    <h1>ご予約</h1>
+    <form method ="post">
+      お名前：<input type="text" name="guest"><br>
+      メールアドレス：<input type="text" name="mail"><br>
+      店舗：<select name="shop">
+                    <option value="池袋">池袋</option>
+                    <option value="新宿">新宿</option>
+                    <option value="P新宿">P新宿</option>
+                    <option value="渋谷宮益坂">渋谷宮益坂</option>
+                    <option value="P渋谷">P渋谷</option>
+                    <option value="PG渋谷">PG渋谷</option>
+                    <option value="目黒">目黒</option>
+                    <option value="赤坂">赤坂</option>
+                    <option value="六本木">六本木</option>
+                    <option value="五反田東口">五反田東口</option>
+                    <option value="五反田西口">五反田西口</option>
+                    <option value="有楽町イトシア">有楽町イトシア</option>
+                    <option value="有楽町アネックス">有楽町アネックス</option>
+                    <option value="自由が丘">自由が丘</option>
+                    <option value="原宿">原宿</option>
+                  </select><br>
+      日付： <input type = "text" name = "date" id ="datepicker"><br>
+      時間：<select name="time">
+                    <option value="9:00">9:00</option>
+                    <option value="10:00">10:00</option>
+                    <option value="11:00">11:00</option>
+                    <option value="12:00">12:00</option>
+                    <option value="13:00">13:00</option>
+                    <option value="14:00">14:00</option>
+                    <option value="15:00">15:00</option>
+                    <option value="16:00">16:00</option>
+                    <option value="17:00">17:00</option>
+                    <option value="18:00">18:00</option>
+                    <option value="19:00">19:00</option>
+                    <option value="20:00">20:00</option>
+                  </select><br>
+      <input type="submit" name="送信" >
+      <input type="reset" value="ﾘｾｯﾄ">
+    </form>
+  </article>
+  <footer>
+    <div><img src="../img/footer_syu.gif"></div>
+  </footer>
+
+</body>
+</html>
